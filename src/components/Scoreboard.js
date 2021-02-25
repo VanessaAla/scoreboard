@@ -29,6 +29,8 @@ export default function Scoreboard() {
     set_sort_by(event.target.value);
   };
 
+  const incrementScore = () => {};
+
   return (
     <div className="Scoreboard">
       <p>
@@ -45,6 +47,7 @@ export default function Scoreboard() {
           id={player.id}
           name={player.name}
           score={player.score}
+          incrementScore={incrementScore}
         />
       ))}
       <AddPlayerForm />
