@@ -5,7 +5,7 @@ import Scoreboard from "./components/Scoreboard";
 
 function App() {
   return (
-    <div className="App">
+    <div className="Scoreboard">
       <Title />
       <Scoreboard />
     </div>

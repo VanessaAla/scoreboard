@@ -19,12 +19,9 @@ export default function Scoreboard() {
   return (
     <div className="Scoreboard">
       <h1>Scoreboard</h1>
-      {players.map(
-        (player) => (
-          <Player name={player.name} score={player.score} />
-        )
-        //console.log("player = ", player)
-      )}
+      {players.map((player) => (
+        <Player key={player.id} name={player.name} score={player.score} />
+      ))}
       <AddPlayerForm />
     </div>
   );
