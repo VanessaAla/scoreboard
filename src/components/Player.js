@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Player({ name }) {
+export default function Player({ name, score }) {
   return (
     <div>
       <li className="Player">
-        <p>{name}</p>
+        {name} (score: {score})
       </li>
     </div>
   );
