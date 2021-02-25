@@ -1,7 +1,6 @@
 import "./App.css";
 
 import Title from "./components/Title";
-import Player from "./components/Player";
 import Scoreboard from "./components/Scoreboard";
 
 function App() {
