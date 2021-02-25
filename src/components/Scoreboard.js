@@ -18,10 +18,26 @@ export default function Scoreboard() {
     { id: 4, name: "Billie bob", score: 42 },
   ]);
 
-  const players_sorted = [...players].sort(compare_name);
+  const [sort_by, set_sort_by] = useState("score");
+
+  const players_sorted = [...players].sort(
+    sort_by === "score" ? compare_score : compare_name
+  );
+
+  const change_sorting = (event) => {
+    console.log("new sort order:", event.target.value);
+    set_sort_by(event.target.value);
+  };
 
   return (
     <div className="Scoreboard">
+      <p>
+        Sort order:{" "}
+        <select onChange={change_sorting} value={sort_by}>
+          <option value="score">Sort by score</option>
+          <option value="name">Sort by name</option>
+        </select>
+      </p>
       <p>Player's Scores:</p>
       {players_sorted.map((player) => (
         <Player
