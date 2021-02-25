@@ -29,7 +29,9 @@ export default function Scoreboard() {
     set_sort_by(event.target.value);
   };
 
-  const incrementScore = () => {};
+  const incrementScore = (id) => {
+    console.log("Log the id of the player:", id);
+  };
 
   return (
     <div className="Scoreboard">
