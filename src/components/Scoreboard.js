@@ -18,9 +18,14 @@ export default function Scoreboard() {
 
   return (
     <div className="Scoreboard">
-      <h1>Scoreboard</h1>
+      <p>Player's Scores:</p>
       {players.map((player) => (
-        <Player key={player.id} name={player.name} score={player.score} />
+        <Player
+          key={player.id}
+          id={player.id}
+          name={player.name}
+          score={player.score}
+        />
       ))}
       <AddPlayerForm />
     </div>
