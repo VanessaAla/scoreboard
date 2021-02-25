@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function Player(props) {
+export default function Player({ name }) {
   return (
     <div>
       <li className="Player">
-        <p>{props.name}</p>
+        <p>{name}</p>
       </li>
     </div>
   );
