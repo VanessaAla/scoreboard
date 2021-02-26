@@ -30,7 +30,19 @@ export default function Scoreboard() {
   };
 
   const incrementScore = (id) => {
-    console.log("Log the id of the player:", id);
+    const new_players_array = players.map((player) => {
+      if (player.id === id) {
+        return {
+          ...player,
+
+          score: player.score + 1,
+        };
+      } else {
+        return player;
+      }
+    });
+    //console.log("Log the id of the player:", id);
+    set_players(new_players_array);
   };
 
   return (
