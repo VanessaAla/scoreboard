@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Player from "./Player";
 import AddPlayerForm from "./AddPlayerForm";
+import "./Scoreboard.scss";
 
 function compare_score(player_a, player_b) {
   return player_b.score - player_a.score;
