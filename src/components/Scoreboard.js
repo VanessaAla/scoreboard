@@ -54,6 +54,15 @@ export default function Scoreboard() {
     set_players(new_players_array);
   };
 
+  const randomScores = () => {
+    const new_players_array = players.map((player) => ({
+      ...player,
+      score: Math.floor(Math.random() * Math.floor(101)),
+    }));
+
+    set_players(new_players_array);
+  };
+
   return (
     <div className="Scoreboard">
       <p>
@@ -64,6 +73,7 @@ export default function Scoreboard() {
         </select>
       </p>
       <button onClick={resetScores}>Reset</button>
+      <button onClick={randomScores}>Random Scores</button>
       <p>Player's Scores:</p>
       {players_sorted.map((player) => (
         <Player
