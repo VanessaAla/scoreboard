@@ -45,6 +45,15 @@ export default function Scoreboard() {
     set_players(new_players_array);
   };
 
+  const resetScores = () => {
+    const new_players_array = players.map((player) => ({
+      ...player,
+      score: 0,
+    }));
+
+    set_players(new_players_array);
+  };
+
   return (
     <div className="Scoreboard">
       <p>
@@ -54,6 +63,7 @@ export default function Scoreboard() {
           <option value="name">Sort by name</option>
         </select>
       </p>
+      <button onClick={resetScores}>Reset</button>
       <p>Player's Scores:</p>
       {players_sorted.map((player) => (
         <Player
